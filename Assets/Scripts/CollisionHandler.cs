@@ -12,10 +12,16 @@ public class CollisionHandler : MonoBehaviour
     AudioSource audioSource;
 
     bool isTransitioning = false;
+    bool cheatCollisionEnabled = false;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+    }
+
+    void Update()
+    {
+        HandleCheatKeys();
     }
 
     void OnCollisionEnter(Collision other)
@@ -36,8 +42,22 @@ public class CollisionHandler : MonoBehaviour
         }
     }
 
+    void HandleCheatKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
+            cheatCollisionEnabled = !cheatCollisionEnabled;
+        }
+    }
+
     void HandleCrash()
     {
+        if (cheatCollisionEnabled) return;
+
         isTransitioning = true;
 
         GetComponent<Movement>().enabled = false;
