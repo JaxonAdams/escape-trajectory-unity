@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Over.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/Through.unity
+    guid: f81b521bef2af814c9e0cb49dd727f11
+  - enabled: 1
+    path: Assets/Scenes/Cruncher.unity
+    guid: 44818cdcce3189d49a82b60c8a3d8db0
+  - enabled: 1
     path: Assets/Scenes/Under.unity
     guid: b9e5deaea3efa564e91cb27466446d34
+  - enabled: 1
+    path: Assets/Scenes/Down.unity
+    guid: 0c419f987e99bc8479b195df82ef2f6d
   m_configObjects: {}
